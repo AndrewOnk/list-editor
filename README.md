@@ -1,4 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#This project is the solution for the following task:
+
+## Implement list editor that supports following interactions:
+- Addition of new list item
+- Removal of list item
+- Creation of a sub list
+- Removal of s sub list
+- Moving item up inside list
+- Moving item down inside list
+
+See example of HTML structure: [Codepen](https://codepen.io/SirNicholas/pen/qGJxyG)
+
+### Default view:
+- One `ul ` with input and `Add` button.
+- Input with `Add` button should always be the last option in parent list and all children lists
+- There is no limit to how many sublists can be present.
+
+### Buttons behavior:
+- `down` - move item below in the current list, is not displayed for the last item in the list. If the current item has a sublist, this sublist should be moved too.
+- `up` - move item above in the current list, is not displayed for the first item in the list. If the current item has a sublist, this sublist should be moved too.
+-  `Add Sublist` - adds sublist below current item. Sublist should contain an input field with the `Add` button. Is not displayed in case current item already has a sublist
+- `Remove Sublist` - displays only if the current item has a sublist. Should remove a sublist.
+- `Remove ` - removes the current item. Should always be displayed. If the current item has a sublist, sublist should be removed too.
+
+### Must-Use Stack:
+- ES6 with Babel
+- React.js 16+
+- Redux (optional).
 
 ## Available Scripts
 
@@ -8,9 +35,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -26,43 +50,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

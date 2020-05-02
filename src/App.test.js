@@ -1,9 +1,18 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import expect from 'expect';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App Component', () => {
+  it('Should render header', () => {
+    const { getByText } = render(<App />);
+    const header = getByText(/A Nested List Editor/i);
+    expect(header).toBeInTheDocument();
+  });
+
+  it('Should render list', () => {
+    const { container } = render(<App />)
+    const ul = container.querySelector('ul')
+    expect(ul).toBeInTheDocument();
+  });
 });

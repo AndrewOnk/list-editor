@@ -1,5 +1,4 @@
-
-##This project is the solution for the following task:
+## This project is the solution for the following task:
 Result deployed to https://agitated-poitras-400757.netlify.app/
 
 ## Implement list editor that supports following interactions:
